@@ -202,7 +202,7 @@ main.container > .footer{margin-top:auto}
 .hero-banner{
   position:relative;
   height:420px;
-  background: url("../img/banner.jpg") center/cover no-repeat;
+  background: url("img/banner.jpg") center/cover no-repeat;
   background-attachment: fixed;
   display:flex;
   align-items:center;
