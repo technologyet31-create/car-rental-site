@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سياراتنا</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="js/common.js"></script>
+  <script defer src="js/cars.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner nav-center">
+
+    <!-- Logo -->
+    <a class="brand logo-text" href="index.html">
+      Car<span>Rent</span>
+    </a>
+
+    <!-- Center Links -->
+    <nav class="nav-links nav-middle">
+      <a href="cars.html">سياراتنا</a>
+      <a href="about.html">عنا</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    <!-- Sign in -->
+    <div class="nav-cta signin">
+      <button class="btn">Sign In ▾</button>
+      <div class="signin-menu">
+        <a href="admin-login.html">أدمن</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<main class="container">
+  <section class="section">
+    <h1 style="margin:0 0 12px;">سياراتنا</h1>
+
+    <div class="search-bar">
+      <input type="text" placeholder="ابحث عن سيارة (الموديل، النوع، السنة)">
+
+      <select>
+        <option value="">الفئة</option>
+        <option>Economy</option>
+        <option>Sedan</option>
+        <option>SUV</option>
+      </select>
+
+      <select>
+        <option value="">السعر / اليوم</option>
+        <option>أقل من 150</option>
+        <option>150 - 250</option>
+        <option>أكثر من 250</option>
+      </select>
+
+      <button class="btn btn-primary" type="button">بحث</button>
+    </div>
+
+    <div id="carsGrid" class="grid cards"></div>
+  </section>
+
+  <footer class="footer"><div class="container">© 2025 CarRent</div></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة الأدمن</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="js/common.js"></script>
+  <script defer src="js/admin-dashboard.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner nav-center">
+
+    <!-- Logo -->
+    <a class="brand logo-text" href="index.html">
+      Car<span>Rent</span>
+    </a>
+
+    <!-- Center Links -->
+    <nav class="nav-links nav-middle">
+      <a href="cars.html">سياراتنا</a>
+      <a href="about.html">عنا</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    <!-- Sign in -->
+    <div class="nav-cta signin">
+      <button class="btn">Sign In ▾</button>
+      <div class="signin-menu">
+        <a href="admin-login.html">أدمن</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<main class="container">
+  <section class="section">
+    <h1 style="margin:0 0 14px;">إدارة السيارات</h1>
+
+    <div class="grid" style="grid-template-columns:1fr; gap:16px;">
+      <div class="form-card">
+        <h3 style="margin:0 0 10px;">إضافة سيارة</h3>
+        <div class="form-grid">
+          <div><label>اسم السيارة</label><input id="adminCarName" placeholder="Toyota Corolla"></div>
+          <div><label>السنة</label><input id="adminCarYear" type="number" placeholder="2023"></div>
+          <div><label>السعر/اليوم</label><input id="adminCarPrice" type="number" placeholder="120"></div>
+          <div><label>الفئة</label>
+            <select id="adminCarCategory"><option>Economy</option><option>Sedan</option><option>SUV</option></select>
+          </div>
+          <div><label>عدد المقاعد</label><input id="adminCarSeats" type="number" placeholder="5"></div>
+          <div><label>موقع السيارة (Google Maps Embed)</label><input id="adminCarLocation" placeholder="الصق كود Google Maps Embed (iframe) هنا"></div>
+          <div style="grid-column:1/-1"><label>الصورة (اختياري)</label><input id="adminCarImage" placeholder="img/mycar.jpg"></div>
+        </div>
+        <div id="adminCarMessage" class="status" style="display:none; margin-top:10px;"></div>
+        <div class="form-actions"><button id="adminSaveCar" class="btn btn-primary" type="button">حفظ</button></div>
+      </div>
+    </div>
+
+    <div style="height:16px"></div>
+
+    <div class="table-card">
+      <h3 style="margin:0 0 10px;">السيارات</h3>
+      <table>
+        <thead>
+          <tr><th>السيارة</th><th>السنة</th><th>السعر/اليوم</th><th>الفئة</th><th>المقاعد</th><th>الموقع</th><th>إجراءات</th></tr>
+        </thead>
+        <tbody id="adminCarsTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container">© 2025 CarRent</div></footer>
+</main>
+</body>
+</html>

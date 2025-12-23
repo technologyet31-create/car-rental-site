@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تفاصيل السيارة</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="js/common.js"></script>
+  <script defer src="js/car-details.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner nav-center">
+
+    <!-- Logo -->
+    <a class="brand logo-text" href="index.html">
+      Car<span>Rent</span>
+    </a>
+
+    <!-- Center Links -->
+    <nav class="nav-links nav-middle">
+      <a href="cars.html">سياراتنا</a>
+      <a href="about.html">عنا</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    <!-- Sign in -->
+    <div class="nav-cta signin">
+      <button class="btn">Sign In ▾</button>
+      <div class="signin-menu">
+        <a href="admin-login.html">أدمن</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<main class="container">
+  <section class="section">
+    <div class="grid" style="grid-template-columns: 1fr 1fr; gap:16px;">
+      <div class="card" style="margin:0">
+        <div class="card-img"><img id="carImage" src="img/corolla.jpg" alt="Car"></div>
+        <div class="card-body">
+          <div class="card-title"><span id="carTitle">—</span><span class="badge" id="carCategory">—</span></div>
+          <div class="meta"><span id="carMetaTransmission">—</span><span id="carMetaFuel">—</span><span id="carMetaSeats">—</span></div>
+          <div class="price"><span id="carPrice">—</span><small>د.ل / يوم</small></div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h2 style="margin:0 0 12px;">المواصفات</h2>
+        <div class="form-grid">
+          <div>
+            <label>الموديل</label>
+            <input id="specModel" value="" readonly>
+          </div>
+          <div>
+            <label>السعر/اليوم</label>
+            <input id="specPrice" value="" readonly>
+          </div>
+          <div>
+            <label>نوع القير</label>
+            <input id="specTransmission" value="" readonly>
+          </div>
+          <div>
+            <label>عدد المقاعد</label>
+            <input id="specSeats" value="" readonly>
+          </div>
+          <div style="grid-column:1/-1">
+            <label>الوصف</label>
+            <textarea id="specDescription" readonly></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a class="btn btn-primary" id="bookNowLink" href="booking.html">احجز الآن</a>
+          <a class="btn" href="cars.html">رجوع</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" style="grid-template-columns: 1fr; gap:16px; margin-top:16px; ">
+      <div class="form-card" id="carLocationCard" style="display:none;">
+        <h2 style="margin:0 0 12px;">موقع السيارة</h2>
+        <iframe id="carLocationMap" class="map-embed" title="موقع السيارة" loading="lazy"></iframe>
+        <div class="form-actions">
+          <a class="btn" id="carLocationLink" href="#" target="_blank" rel="noopener noreferrer">فتح في Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container">© 2025 CarRent</div></footer>
+</main>
+</body>
+</html>

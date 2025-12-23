@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الحجز</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="js/common.js"></script>
+  <script defer src="js/booking.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner nav-center">
+
+    <!-- Logo -->
+    <a class="brand logo-text" href="index.html">
+      Car<span>Rent</span>
+    </a>
+
+    <!-- Center Links -->
+    <nav class="nav-links nav-middle">
+      <a href="cars.html">سياراتنا</a>
+      <a href="about.html">عنا</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+
+    <!-- Sign in -->
+    <div class="nav-cta signin">
+      <button class="btn">Sign In ▾</button>
+      <div class="signin-menu">
+        <a href="admin-login.html">أدمن</a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<main class="container">
+  <section class="section form-wrap">
+    <h1 style="margin:0 0 12px;">احجز الآن</h1>
+
+    <form class="form-card">
+      <div class="form-grid">
+        <div>
+          <label>الاسم</label>
+          <input type="text" placeholder="اسم العميل" required>
+        </div>
+        <div>
+          <label>رقم الهاتف</label>
+          <input type="tel" placeholder="09xxxxxxxx" required>
+        </div>
+        <div>
+          <label>البريد الإلكتروني</label>
+          <input type="email" placeholder="name@example.com" required>
+        </div>
+        <div>
+          <label>السيارة</label>
+          <select id="carSelect"></select>
+        </div>
+        <div>
+          <label>من</label>
+          <input id="startDate" type="date" required>
+        </div>
+        <div>
+          <label>إلى</label>
+          <input id="endDate" type="date" required>
+        </div>
+        <div>
+          <label>عدد الأيام</label>
+          <input id="daysInput" type="text" placeholder="—" readonly>
+        </div>
+        <div>
+          <label>الإجمالي</label>
+          <input id="totalInput" type="text" placeholder="—" readonly>
+        </div>
+        <div style="grid-column:1/-1">
+          <label>ملاحظات</label>
+          <textarea placeholder="أي ملاحظات إضافية..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">إرسال الطلب</button>
+        <a class="btn" href="cars.html">إلغاء</a>
+      </div>
+    </form>
+  </section>
+
+  <footer class="footer"><div class="container">© 2025 CarRent</div></footer>
+</main>
+</body>
+</html>
